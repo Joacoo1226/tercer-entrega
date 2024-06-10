@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUSTICOS FC eSPORTS - Integrantes</title>
+    <!-- Estilos generales y CSS externo -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <style>
+        /* Estilos para el menú hamburguesa */
+        .hamburguesa {
+            display: none; /* Ocultar por defecto en pantallas grandes */
+            cursor: pointer;
+        }
+
+        .barra {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        /* Mostrar el menú en dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            .hamburguesa {
+                display: block; /* Mostrar el botón de hamburguesa */
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                z-index: 999; /* Asegurar que esté sobre el contenido */
+            }
+
+            nav ul {
+                display: none; /* Ocultar el menú por defecto en dispositivos móviles */
+                flex-direction: column;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: burlywood;
+                border-bottom: 1px solid #ccc;
+                padding: 10px 0;
+                z-index: 998; /* Asegurar que esté debajo del botón de hamburguesa */
+            }
+
+            nav ul.active {
+                display: flex; /* Mostrar el menú cuando está activo */
+            }
+
+            nav ul li {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Estilos específicos para la página de Integrantes */
+        main {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .contenedordejugadores {
+            margin-bottom: 20px;
+        }
+
+        .imgjugadores {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contenedordejugadores p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+           <img class="logo" src="../iMG/LOGO DE RUSTICOS.png" alt="logo de rusticos"> 
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html"> Inicio </a></li>
+                <li><a href="calendario.html"> Calendario </a></li>
+                <li><a href="integrantes.HTML"> Integrantes </a></li>
+                <li><a href="contacto.html"> Contacto </a></li>
+                <li><a href="noticias.html"> Noticias </a></li>
+            </ul>
+            <div class="hamburguesa" onclick="toggleMenu()">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1> RUSTICOS FC eSPORTS</h1>  
+        <h2>Conoce a Nuestros Jugadores</h2>
+
+        <div class="contenedordejugadores"> 
+            <img class="imgjugadores" src="../iMG/JUGADOR 1.png" alt="FOTO DE LUKE">
+            <p>LUKECSGO (Lider)</p>
+        </div>
+        <div class="contenedordejugadores"> 
+            <img class="imgjugadores" src="../iMG/JUGADOR 2.png" alt="FOTO DE PEDRO">
+            <p>XPEDROZZ (AWPer)</p>
+        </div>
+        <div class="contenedordejugadores"> 
+            <img class="imgjugadores" src="../iMG/JUGADOR 3.png" alt="FOTO MARICS">
+            <p>MARICS (El rifler)</p>
+        </div>
+        <div class="contenedordejugadores"> 
+            <img class="imgjugadores" src="../iMG/JUGADOR 4.png" alt="FOTO CARLA">
+            <p>xxCARLAxx (Support)</p>
+        </div>
+        <div class="contenedordejugadores"> 
+            <img class="imgjugadores" src="../iMG/JUGADOR 5.png" alt="FOTO PANCHOCS">
+            <p>PANCHOCS (El lurker)</p>
+        </div>
+    </main>
+
+    <footer>
+        <h3>
+            2024, ARG - Rusticos FC - Todos los derechos reservados
+        </h3>
+    </footer>
+
+    <script>
+        // JavaScript para mostrar y ocultar el menú en dispositivos móviles
+        function toggleMenu() {
+            var menu = document.querySelector("nav ul");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
